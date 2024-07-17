@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>1 To 100 Number </title>
+</head>
+<body>
+<script>
+    console.log("Numbers from 1 to 100:");
+for (let i = 1; i <= 100; i++) {
+    console.log(i);
+}
+
+// Display odd numbers from 1 to 100
+console.log("Odd numbers from 1 to 100:");
+for (let i = 1; i <= 100; i++) {
+    if (i % 2 !== 0) {
+        console.log(i);
+    }
+}
+
+// Display even numbers from 1 to 100
+console.log("Even numbers from 1 to 100:");
+for (let i = 1; i <= 100; i++) {
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+}
+
+// Function to check if a number is prime
+function isPrime(num) {
+    if (num <= 1) return false;
+    if (num <= 3) return true;
+    if (num % 2 === 0 || num % 3 === 0) return false;
+    for (let i = 5; i * i <= num; i += 6) {
+        if (num % i === 0 || num % (i + 2) === 0) return false;
+    }
+    return true;
+
+}
+
+// Display prime numbers from 1 to 100
+console.log("Prime numbers from 1 to 100:");
+for(let i=1;i<=100;i++)
+{
+  if (isPrime(i)){
+    console.log(i)
+  }
+}
+</script>
